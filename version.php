@@ -26,3 +26,5 @@
  */
 
 $plugin->version = 2012073000;
+$plugin->release = '0.3';
+$plugin->requires = 2011033010.00;
