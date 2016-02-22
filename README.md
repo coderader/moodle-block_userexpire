@@ -19,7 +19,7 @@
  * @subpackage block
  * @copyright  2012 Jeff Rader - Sunset Online
  * @author     2012 Jeff Rader <jrader@sibi.cc>
- * @version   0.3     
+ * @version   1.0     
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
