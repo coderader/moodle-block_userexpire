@@ -1,4 +1,4 @@
-<?php //$Id: block_userexpire.php,v 0.3 2012-07-30 22:00:00 jrader Exp $
+<?php //$Id: block_userexpire.php,v 1.0 2016-02-22 22:00:00 jrader Exp $
 
 // This file is part of Moodle - http://moodle.org/
 //
@@ -21,7 +21,7 @@
  * @subpackage block
  * @copyright  2012 Jeff Rader - Sunset Online
  * @author     2012 Jeff Rader <jrader@sibi.cc>
- * @version    0.3
+ * @version    1.0
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -53,11 +53,17 @@ class block_userexpire extends block_base {
 				$records = $DB->get_records_sql($sql, array($USER->id, $course->id));
 				$student = reset($records);
 				if (isset($student->timeend) && $student->timeend>0) {
-					$this->title = "Your Enrollment";
+					$this->title = get_string('expiretitle', 'block_userexpire');
 					$this->content->text .= get_string('expirelabel', 'block_userexpire').": ".date(get_string('strftimedate', 'block_userexpire'),$student->timeend);
+					$this->content->text .= " (".floor(($student->timeend - time())/(24*60*60))." ".get_string('expireday', 'block_userexpire').", ".
+						floor((($student->timeend - time())%(24*60*60))/3600)." ".get_string('expirehours', 'block_userexpire').")";
+				} else {
+					$this->title = get_string('enrolltitle', 'block_userexpire');
+					$link = new moodle_url('/enrol/index.php', array('id' => $course->id));
+					$this->content->text .= '<a href="'.$link->out().'">'.get_string('enrolltext', 'block_userexpire').'</a>';
 				}
 			}
-       }
+       } 
 
         $this->content->footer = '';
         return $this->content;

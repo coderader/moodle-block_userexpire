@@ -25,6 +25,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$plugin->version = 2012073000;
-$plugin->release = '0.3';
+$plugin->version = 2015022200;
+$plugin->release = '1.0';
 $plugin->requires = 2011033010.00;
+$plugin->component = "block_userexpire";
+$plugin->maturity = MATURITY_STABLE;
