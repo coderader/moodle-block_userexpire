@@ -19,14 +19,14 @@
  *
  * @package    moodlecore
  * @subpackage block
- * @copyright  2012 Jeff Rader - Sunset Online
- * @author     2012 Jeff Rader <jrader@sibi.cc>
- * @version    1.0
+ * @copyright  2023 Jeff Rader - Sunset Online
+ * @author     Jeff Rader <jrader@sibi.cc>
+ * @version    1.2
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$plugin->version = 2015022200;
-$plugin->release = '1.0';
-$plugin->requires = 2011033010.00;
+$plugin->version = 2023101000;
+$plugin->release = '1.2';
+$plugin->requires = 2020061500;
 $plugin->component = "block_userexpire";
 $plugin->maturity = MATURITY_STABLE;
