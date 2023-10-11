@@ -1,4 +1,4 @@
-<?php //$Id: block_userexpire.php,v 1.0 2016-02-22 22:00:00 jrader Exp $
+<?php
 
 // This file is part of Moodle - http://moodle.org/
 //
@@ -19,55 +19,14 @@
  *
  * @package    moodlecore
  * @subpackage block
- * @copyright  2012 Jeff Rader - Sunset Online
- * @author     2012 Jeff Rader <jrader@sibi.cc>
- * @version    1.0
+ * @copyright  2023 Jeff Rader - Sunset Online
+ * @author     Jeff Rader <jrader@sibi.cc>
+ * @version    1.2
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-class block_userexpire extends block_base {
-
-    function init() {
-        $this->title = get_string('pluginname','block_userexpire');
-    }
-
-    function get_content() {
-        global $CFG, $OUTPUT, $USER, $course, $DB;
-        
-        require_once($CFG->dirroot.'/message/lib.php');
-        
-        if ($this->content !== NULL) {
-            return $this->content;
-        }
-
-        $this->content = new stdClass;
-        $this->content->text = '';
-
-        if (isloggedin() && is_object($course)) {
-			if ($course->id != SITEID) {
-				$sql = 'SELECT ue.id, ue.timestart, ue.timeend
-					FROM mdl_user_enrolments ue
-					JOIN mdl_enrol e on ue.enrolid = e.id
-					WHERE ue.userid = ? AND e.courseid = ?';
-			   
-				$records = $DB->get_records_sql($sql, array($USER->id, $course->id));
-				$student = reset($records);
-				if (isset($student->timeend) && $student->timeend>0) {
-					$this->title = get_string('expiretitle', 'block_userexpire');
-					$this->content->text .= get_string('expirelabel', 'block_userexpire').": ".date(get_string('strftimedate', 'block_userexpire'),$student->timeend);
-					$this->content->text .= " (".floor(($student->timeend - time())/(24*60*60))." ".get_string('expireday', 'block_userexpire').", ".
-						floor((($student->timeend - time())%(24*60*60))/3600)." ".get_string('expirehours', 'block_userexpire').")";
-				} else {
-					$this->title = get_string('enrolltitle', 'block_userexpire');
-					$link = new moodle_url('/enrol/index.php', array('id' => $course->id));
-					$this->content->text .= '<a href="'.$link->out().'">'.get_string('enrolltext', 'block_userexpire').'</a>';
-				}
-			}
-       } 
-
-        $this->content->footer = '';
-        return $this->content;
-    }
-    
-}
-?>
+$plugin->version = 2023101000;
+$plugin->release = '1.2';
+$plugin->requires = 2020061500;
+$plugin->component = "block_userexpire";
+$plugin->maturity = MATURITY_STABLE;
