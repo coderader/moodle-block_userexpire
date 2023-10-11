@@ -25,6 +25,9 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+defined('MOODLE_INTERNAL') || die();
+
+
 class block_userexpire extends block_base {
 
     function init() {
@@ -45,10 +48,10 @@ class block_userexpire extends block_base {
 
         if (isloggedin() && is_object($course)) {
 			if ($course->id != SITEID) {
-				$sql = 'SELECT ue.id, ue.timestart, ue.timeend
-					FROM mdl_user_enrolments ue
-					JOIN mdl_enrol e on ue.enrolid = e.id
-					WHERE ue.userid = ? AND e.courseid = ?';
+				$sql = "SELECT ue.id, ue.timestart, ue.timeend
+					FROM {user_enrolments} ue
+					JOIN {enrol} e on ue.enrolid = e.id
+					WHERE ue.userid = ? AND e.courseid = ?";
 			   
 				$records = $DB->get_records_sql($sql, array($USER->id, $course->id));
 				$student = reset($records);
