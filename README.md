@@ -15,8 +15,7 @@
 
 /**
  *
- * @package    moodlecore
- * @subpackage block
+ * @package    block_userexpire
  * @copyright  2026 Jeff Rader - Sunset Online
  * @author     Jeff Rader <jrader@sibi.cc>
  * @version   1.3     
