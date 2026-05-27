@@ -24,7 +24,7 @@
  */
 
 defined('MOODLE_INTERNAL') || die();
-$plugin->version = 2026052700;
+$plugin->version = 2026052701;
 $plugin->release = '1.3';
 $plugin->requires = 2020061500;
 $plugin->component = "block_userexpire";
