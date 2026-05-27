@@ -17,16 +17,15 @@
 
 /**
  *
- * @package    moodlecore
- * @subpackage block
- * @copyright  2023 Jeff Rader - Sunset Online
+ * @package    block_userexpire
+ * @copyright  2026 Jeff Rader - Sunset Online
  * @author     Jeff Rader <jrader@sibi.cc>
- * @version    1.2
+ * @version    1.3
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$plugin->version = 2023101000;
-$plugin->release = '1.2';
+$plugin->version = 2026052700;
+$plugin->release = '1.3';
 $plugin->requires = 2020061500;
 $plugin->component = "block_userexpire";
 $plugin->maturity = MATURITY_STABLE;
