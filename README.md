@@ -17,21 +17,21 @@
  *
  * @package    moodlecore
  * @subpackage block
- * @copyright  2023 Jeff Rader - Sunset Online
+ * @copyright  2026 Jeff Rader - Sunset Online
  * @author     Jeff Rader <jrader@sibi.cc>
- * @version   1.2     
+ * @version   1.3     
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 Features:
 
 This block intends to give the user a few links in order to navigate quickly 
-through moodle. Besides it advices the user about unread messages and 
+through Moodle. It advises the user about unread messages and 
 information about the last access to the LMS. 
 
 Installation:
 
-1- Place the userexpire folder (if you have downloaded zipped then you have to unzip 
+1- Place the userexpire folder (if you have downloaded zipped file then you have to unzip 
 it) into the blocks folder under the root of your Moodle installation.
 2- Go to the notifications page and Moodle will automatically install this new
 block. 
