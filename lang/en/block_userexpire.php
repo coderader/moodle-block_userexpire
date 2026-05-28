@@ -24,12 +24,12 @@
  * @author     Jeff Rader <jrader@sibi.cc>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-    $string['expirelabel'] = 'Enrollment Expires';
-    $string['expireday'] = 'days';
-    $string['pluginname'] = 'User Expire block';
-    $string['strftimedate'] = 'F j, Y';
-    $string['enrolltext'] = "Enroll me in this course";
-    $string['enrolltitle'] = "Enroll in this Course";
-    $string['userinfo'] = 'User Expire Information';
-    $string['expiretitle'] = 'Your Enrollment';
-    $string['expirehours'] = 'hours';
+
+$string['enrolltext'] = "Enroll me in this course";
+$string['enrolltitle'] = "Enroll in this Course";
+$string['expirehours'] = 'hours';
+$string['expireday'] = 'days';
+$string['strftimedate'] = 'F j, Y';
+$string['expirelabel'] = 'Enrollment Expires';
+$string['expiretitle'] = 'Your Enrollment';
+$string['pluginname'] = 'User Expire block';
