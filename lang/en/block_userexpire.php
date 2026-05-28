@@ -16,20 +16,20 @@
 
 /**
  * Language strings for user expire block.
- * 
+ *
  * This block shows when the user will expire in the course.
- * 
+ *
  * @package    block_userexpire
  * @copyright  2026 Jeff Rader - Sunset Online
  * @author     Jeff Rader <jrader@sibi.cc>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
     $string['expirelabel'] = 'Enrollment Expires';
+    $string['expireday'] = 'days';
     $string['pluginname'] = 'User Expire block';
     $string['strftimedate'] = 'F j, Y';
-    $string['expireday'] = 'days';
-    $string['userinfo'] = 'User Expire Information';
     $string['enrolltext'] = "Enroll me in this course";
-    $string['expiretitle'] = 'Your Enrollment';
     $string['enrolltitle'] = "Enroll in this Course";
+    $string['userinfo'] = 'User Expire Information';
+    $string['expiretitle'] = 'Your Enrollment';
     $string['expirehours'] = 'hours';
