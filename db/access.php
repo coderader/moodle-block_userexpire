@@ -15,11 +15,10 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * @file
+ * 
  * @package    block_userexpire
  * @copyright  2026 Jeff Rader - Sunset Online
  * @author     Jeff Rader <jrader@sibi.cc>
- * @version    1.3
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
     defined('MOODLE_INTERNAL') || die();
