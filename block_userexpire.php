@@ -77,7 +77,7 @@ class block_userexpire extends block_base {
                         new moodle_url(
                             $CFG->wwwroot . '/enrol/index.php',
                             ['id' => $course->id]
-                        ), 
+                        ),
                         get_string('enrolltext', 'block_userexpire')
                     );
                 }
