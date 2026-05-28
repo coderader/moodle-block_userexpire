@@ -16,9 +16,9 @@
 
 /**
  * Language strings for user expire block.
- * 
+ *
  * This block shows when the user will expire in the course.
- * 
+ *
  * @package    block_userexpire
  * @copyright  2026 Jeff Rader - Sunset Online
  * @author     Jeff Rader <jrader@sibi.cc>
