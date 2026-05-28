@@ -15,6 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
+ * Language strings for user expire block.
+ * 
+ * This block shows when the user will expire in the course.
  * 
  * @package    block_userexpire
  * @copyright  2026 Jeff Rader - Sunset Online
