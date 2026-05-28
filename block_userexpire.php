@@ -16,9 +16,9 @@
 
 /**
  * Language strings for user expire block.
- * 
+ *
  * This block shows when the user will expire in the course.
- * 
+ *
  * @package    block_userexpire
  * @copyright  2026 Jeff Rader - Sunset Online
  * @author     Jeff Rader <jrader@sibi.cc>
@@ -33,19 +33,19 @@
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_userexpire extends block_base {
-	/**
-    * Standard title for the block
-    *
-    * @return string of the plugin name
-    */
+    /**
+     * Standard title for the block
+     *
+     * @return string of the plugin name
+     */
     public function init() {
         $this->title = get_string('pluginname', 'block_userexpire');
     }
     /**
-    * The main output of the block.
-    *
-    * @return string of the output for the block
-    */
+     * The main output of the block.
+     *
+     * @return string of the output for the block
+     */
     public function get_content() {
         global $CFG, $OUTPUT, $USER, $course, $DB;
         require_once($CFG->dirroot . '/message/lib.php');
@@ -74,8 +74,11 @@ class block_userexpire extends block_base {
                 } else {
                     $this->title = get_string('enrolltitle', 'block_userexpire');
                     $this->content->text = html_writer::link(
-						new moodle_url($CFG->wwwroot . '/enrol/index.php',
-						['id' => $course->id]), get_string('enrolltext', 'block_userexpire')
+                        new moodle_url(
+                            $CFG->wwwroot . '/enrol/index.php',
+                            ['id' => $course->id]
+                        ), 
+                        get_string('enrolltext', 'block_userexpire')
                     );
                 }
             }
@@ -85,12 +88,12 @@ class block_userexpire extends block_base {
         return $this->content;
     }
     /**
-    * All of the formats of this block.
-    *
-    * @return array to designate where the block anca be used.
-    */
+     * All of the formats of this block.
+     *
+     * @return array to designate where the block anca be used.
+     */
     public function applicable_formats() {
-    // Default case: the block can be used in courses and site index, but not in activities.
+        // Default case: the block can be used in courses and site index, but not in activities.
         return [
             'site-index' => false,
             'course-view' => true,
